@@ -1,0 +1,17 @@
+{
+	"name": "SQL script 1",
+	"properties": {
+		"content": {
+			"query": "create table #test (id int);\n\n;with x as (select x from (values (1),(2),(3),(4),(5),(6),(7),(8),(9),(0)) x(x))\n\ninsert #test (id) \nselect row_number() over (order by (select null)) \nfrom x a;\n\nselect count(1) from #test;",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "master",
+				"poolName": "Built-in"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}
